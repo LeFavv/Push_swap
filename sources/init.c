@@ -6,17 +6,11 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 09:01:42 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/08 15:16:56 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/08 15:19:17 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <limits.h>
-
-t_node	*ft_lstnew(void *content);
-int	ft_isdigit(int c);
-void	ft_lstadd_back(t_node **lst, t_node *new);
-long	ft_atol(const char *str);
 
 void	init_stack_a(t_node **a, t_node **b, char **values, int string)
 {
@@ -28,9 +22,8 @@ void	init_stack_a(t_node **a, t_node **b, char **values, int string)
 		t_node	*new;
 		long	nbr;
 		int		i;
-		
 
-		(void)b; //eviter warning compilateur
+		(void)b;
 		i = 0;
 		while (values[i])
 		{
