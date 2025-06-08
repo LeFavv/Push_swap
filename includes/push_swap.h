@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 08:02:23 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/08 17:32:34 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/08 17:42:57 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,21 @@ int		ft_error(t_node **a, t_node **b, char **values, int string);
 void	free_stack(t_node **a);
 void	free_split(char **values);
 void	ft_free_all(t_node **a, t_node **b, char **values, int string);
+
+//mouvements
+void	sa(t_node **a);
+void	sb(t_node **b);
+void	ss(t_node **a, t_node **b);
+void	pa(t_node **a, t_node **b);
+void	pb(t_node **a, t_node **b);
+void	ra(t_node **a);
+void	rb(t_node **b);
+void	rr(t_node **a, t_node **b);
+void	rra(t_node **a);
+void	rrb(t_node **b);
+void	rrr(t_node **a, t_node **b);
+
+
 
 typedef struct s_node
 {
