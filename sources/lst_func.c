@@ -1,42 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   lst_func.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/08 08:02:04 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/08 17:28:11 by vafavard         ###   ########.fr       */
+/*   Created: 2025/06/08 17:24:45 by vafavard          #+#    #+#             */
+/*   Updated: 2025/06/08 17:32:51 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int argc, char **argv)
+void	ft_lstadd_back(t_node **lst, t_node *new)
 {
-	t_node	*a;
-	t_node	*b;
-	char 	**values;
-	int		string;
+	t_node	*temp;
 
-	string = 0;
-	a = NULL;
-	b = NULL;
-	if (argc < 2)
-		return (0);
-	if (argc == 2)
+	if (*lst == NULL)
 	{
-		values = ft_split(argv[1], ' ');
-		string = 1;
+		*lst = new;
+		return ;
 	}
-	else
-		values = &argv[1];
-	init_stack_a(&a, &b, values, string);
-	//sort
-	//un algo pour 2 swap a
-	//un algo pour 3
-	//un algo pour 4
-	//un algo pour 5
-	//un algo pour plus de 5	
-	return (free_all(a, b, values, string), 0);
+	temp = *lst;
+	while (temp->next != NULL)
+	{
+		temp = temp->next;
+	}
+	temp->next = new;
+}
+
+t_node	*ft_lstnew(void *content)
+{
+	t_node	*new_node;
+
+	new_node = (t_node *)malloc(sizeof(t_node));
+	if (!new_node)
+		return (NULL);
+	new_node->nbr = content;
+	new_node->next = NULL;
+	return (new_node);
 }

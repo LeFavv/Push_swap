@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 08:02:23 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/08 17:14:04 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/08 17:32:34 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,18 @@
 # include <math.h>
 #include <limits.h>
 
+
+//lst_func
 t_node	*ft_lstnew(void *content);
-int		ft_isdigit(int c);
 void	ft_lstadd_back(t_node **lst, t_node *new);
-long	ft_atol(const char *str);
+
+//check
 int		check_duplicates(t_node *stack, int value);
-void	init_stack_a(t_node **a, t_node **b, char **values, int string);
 int		is_valid_number(char *str);
+int		ft_isdigit(int c);
+
+long	ft_atol(const char *str);
+void	init_stack_a(t_node **a, t_node **b, char **values, int string);
 
 //sort
 int	stack_sorted(t_node **stack);
