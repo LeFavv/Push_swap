@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 08:02:23 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/08 16:00:06 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/08 17:14:04 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,10 @@ int		check_duplicates(t_node *stack, int value);
 void	init_stack_a(t_node **a, t_node **b, char **values, int string);
 int		is_valid_number(char *str);
 
+//sort
+int	stack_sorted(t_node **stack);
+
+
 //error - free
 int		ft_error(t_node **a, t_node **b, char **values, int string);
 void	free_stack(t_node **a);
@@ -39,6 +43,5 @@ typedef struct s_node
 	int				index;
 	struct s_node	*next;
 }	t_node;
-
 
 #endif

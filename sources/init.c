@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 09:01:42 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/08 15:19:17 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/08 17:14:20 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,4 +132,19 @@ int	check_duplicates(t_node *stack, int value)
 		stack = stack->next;
 	}
 	return (1);
+}
+
+int	stack_sorted(t_node **stack)
+{
+	t_node *current;
+
+	if (!stack)
+		return (1);
+	current = *stack;
+	while (current->nbr < current->next->nbr)
+	{
+		if (current->next->next == NULL)
+			return (1);
+	}
+	return (0);
 }
