@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 15:19:46 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/08 15:50:43 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/08 16:02:22 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void	free_split(char **values)
 		free(values[i]);
 		i++;
 	}
+	free(values);
 }
 
 void	ft_free_all(t_node **a, t_node **b, char **values, int string)
