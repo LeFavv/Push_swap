@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 08:02:23 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/09 17:29:16 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/09 17:33:02 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int		ft_isdigit(int c);
 //utils
 long	ft_atol(const char *str);
 t_node  *find_max(t_node *stack);
+t_node  *find_min(t_node *stack);
 
 //stack gest
 void	init_stack_a(t_node **a, t_node **b, char **values, int string);
