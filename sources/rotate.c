@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 17:45:23 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/09 15:10:31 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/09 15:12:45 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	ra(t_node **a);
 void	rb(t_node **b);
 void	rr(t_node **a, t_node **b);
+void    rotate(t_node **stack);
 
 void    rotate(t_node **stack)
 {

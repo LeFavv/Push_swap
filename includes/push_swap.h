@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 08:02:23 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/09 14:58:19 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/09 15:32:02 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,16 +56,16 @@ void	pb(t_node **a, t_node **b);
 void    push(t_node **stack_one, t_node **stack_two);
 
 //rotate
+void    rotate(t_node **stack);
 void	ra(t_node **a);
 void	rb(t_node **b);
 void	rr(t_node **a, t_node **b);
 
 //reverse rotate
+void    reverse_rotate(t_node **stack);
 void	rra(t_node **a);
 void	rrb(t_node **b);
 void	rrr(t_node **a, t_node **b);
-
-
 
 typedef struct s_node
 {
