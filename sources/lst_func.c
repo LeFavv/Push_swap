@@ -6,11 +6,17 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 17:24:45 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/09 15:34:56 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/09 16:50:55 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	ft_lstadd_back(t_node **lst, t_node *new);
+t_node	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_node **lst, t_node *new);
+t_node	*ft_lstlast(t_node *lst);
+int	ft_lstsize(t_node *lst);
 
 void	ft_lstadd_back(t_node **lst, t_node *new)
 {
@@ -59,4 +65,19 @@ t_node	*ft_lstlast(t_node *lst)
 	while (temp->next != NULL)
 		temp = temp->next;
 	return (temp);
+}
+
+int	ft_lstsize(t_node *lst)
+{
+	int		result;
+	t_node	*temp;
+
+	result = 0;
+	temp = lst;
+	while (temp != NULL)
+	{
+		temp = temp->next;
+		result++;
+	}
+	return (result);
 }

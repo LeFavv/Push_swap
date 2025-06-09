@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 08:02:04 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/09 15:34:55 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/09 16:56:29 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,11 @@ int main(int argc, char **argv)
 		values = &argv[1];
 	init_stack_a(&a, &b, values, string);
 	//sort
+	send_to(&a, &b);
 	//un algo pour 2 swap a
 	//un algo pour 3
 	//un algo pour 4
 	//un algo pour 5
-	//un algo pour plus de 5	
+	//un algo pour plus de 5
 	return (free_all(a, b, values, string), 0);
 }

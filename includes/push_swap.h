@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 08:02:23 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/09 15:32:02 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/09 17:29:16 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,18 @@ t_node	*ft_lstnew(void *content);
 void	ft_lstadd_back(t_node **lst, t_node *new);
 void	ft_lstadd_front(t_node **lst, t_node *new);
 t_node	*ft_lstlast(t_node *lst);
+int	ft_lstsize(t_node *lst);
 
 //check
 int		check_duplicates(t_node *stack, int value);
 int		is_valid_number(char *str);
 int		ft_isdigit(int c);
 
+//utils
 long	ft_atol(const char *str);
+t_node  *find_max(t_node *stack);
+
+//stack gest
 void	init_stack_a(t_node **a, t_node **b, char **values, int string);
 
 //sort
