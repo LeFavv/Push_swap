@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 08:02:23 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/08 17:49:11 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/09 14:12:44 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 //lst_func
 t_node	*ft_lstnew(void *content);
 void	ft_lstadd_back(t_node **lst, t_node *new);
+void	ft_lstadd_front(t_node **lst, t_node *new);
 
 //check
 int		check_duplicates(t_node *stack, int value);
@@ -42,14 +43,20 @@ void	free_split(char **values);
 void	ft_free_all(t_node **a, t_node **b, char **values, int string);
 
 //mouvements
+//swap
+void    swap(t_node **stack);
 void	sa(t_node **a);
 void	sb(t_node **b);
 void	ss(t_node **a, t_node **b);
-void	pa(t_node **a, t_node **b);
-void	pb(t_node **a, t_node **b);
+
+//push
+
+//rotate
 void	ra(t_node **a);
 void	rb(t_node **b);
 void	rr(t_node **a, t_node **b);
+
+//reverse rotate
 void	rra(t_node **a);
 void	rrb(t_node **b);
 void	rrr(t_node **a, t_node **b);
@@ -59,7 +66,6 @@ void	rrr(t_node **a, t_node **b);
 typedef struct s_node
 {
 	int				nbr;
-	int				index;
 	struct s_node	*next;
 }	t_node;
 
