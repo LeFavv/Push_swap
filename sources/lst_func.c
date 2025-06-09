@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 17:24:45 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/09 14:12:29 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/09 14:35:38 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,16 @@ void	ft_lstadd_front(t_node **lst, t_node *new)
 		return ;
 	new->next = *lst;
 	*lst = new;
+}
+
+t_node	*ft_lstlast(t_node *lst)
+{
+	t_node	*temp;
+
+	temp = lst;
+	if (lst == NULL)
+		return (NULL);
+	while (temp->next != NULL)
+		temp = temp->next;
+	return (temp);
 }

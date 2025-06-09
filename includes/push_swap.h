@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 08:02:23 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/09 14:12:44 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/09 14:36:13 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <math.h>
-#include <limits.h>
+# include <limits.h>
 
 //lst_func
 t_node	*ft_lstnew(void *content);
 void	ft_lstadd_back(t_node **lst, t_node *new);
 void	ft_lstadd_front(t_node **lst, t_node *new);
+t_node	*ft_lstlast(t_node *lst);
 
 //check
 int		check_duplicates(t_node *stack, int value);
@@ -50,6 +51,9 @@ void	sb(t_node **b);
 void	ss(t_node **a, t_node **b);
 
 //push
+void	pa(t_node **a, t_node **b);
+void	pb(t_node **a, t_node **b);
+void    push(t_node **stack_one, t_node **stack_two);
 
 //rotate
 void	ra(t_node **a);

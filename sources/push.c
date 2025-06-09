@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 17:44:13 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/09 14:26:27 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/09 14:33:22 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	pa(t_node **a, t_node **b);
 void	pb(t_node **a, t_node **b);
+void    push(t_node **stack_one, t_node **stack_two);
 
 void	pa(t_node **a, t_node **b)
 {
