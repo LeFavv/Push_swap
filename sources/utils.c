@@ -6,11 +6,14 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 17:27:56 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/09 17:32:36 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/09 17:34:43 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+t_node  *find_min(t_node *stack);
+t_node  *find_max(t_node *stack);
 
 t_node  *find_max(t_node *stack)
 {

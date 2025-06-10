@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 16:48:28 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/09 17:29:32 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/10 20:24:13 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,15 @@ void    sort_2(t_node **a)
         sa(*a);
 }
 
-
-
 void    sort_3(t_node **a)
 {
+    t_node *max_number;
+    
+    max_number = find_max(a);
+    if ((*a)->nbr == max_number->nbr)
+        ra(a);
+    else if ((*a)->next->nbr == max_number->nbr)
+        rra(a);
+    if ((*a)->nbr > (*a)->next->nbr)
+        sa(a);
 }
