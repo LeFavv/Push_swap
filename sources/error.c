@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 15:19:46 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/09 15:34:58 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/11 19:44:55 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_error(t_node **a, t_node **b, char **values, int string)
 {
 	write (1, "Error\n", 6);
-	free_all(a, b, values, string);
+	ft_free_all(a, b, values, string);
 	exit(1);
 }
 

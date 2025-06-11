@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   utils2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 13:44:45 by vafavard          #+#    #+#             */
-/*   Updated: 2025/05/04 10:33:48 by vafavard         ###   ########.fr       */
+/*   Created: 2025/06/11 05:33:24 by vafavard          #+#    #+#             */
+/*   Updated: 2025/06/11 05:40:42 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
 int		ft_count_word(char const *s, char c);
 char	*ft_malloc(char const *s, int start, int end);
 char	**ft_split(char const *s, char c);
-void	ft_free_all(char **tab, int last);
 int		extern_loop(const char *s, int i, char c, int flag);
 
 int	ft_count_word(char const *s, char c)
@@ -32,16 +31,6 @@ int	ft_count_word(char const *s, char c)
 		i++;
 	}
 	return (word);
-}
-
-void	ft_free_all(char **tab, int last)
-{
-	int	i;
-
-	i = 0;
-	while (i < last)
-		free(tab[i++]);
-	free(tab);
 }
 
 char	*ft_malloc(char const *s, int start, int end)
@@ -103,21 +92,8 @@ char	**ft_split(char const *s, char c)
 		{
 			tab[i_tab++] = ft_malloc(s, start, i);
 			if (!tab[i_tab - 1])
-				return (ft_free_all(tab, i_tab), NULL);
+				return (free_split(tab), NULL);
 		}
 	}
 	return (tab[i_tab] = NULL, tab);
 }
-
-// #include <stdio.h>
-// int main(void)
-// {
-//     char *test = "salut a tous   t ";
-//     char c = ' ';
-//     char **tab = ft_split(test, c);
-//     int i = 0;
-//     while (tab[i])
-//         printf("%s\n", tab[i++]);
-//     ft_free_all(tab, i);
-//     return (0);
-// } 

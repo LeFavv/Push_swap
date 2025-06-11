@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 09:01:42 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/11 02:39:36 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/11 19:40:29 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,17 @@ void	init_stack_a(t_node **a, t_node **b, char **values, int string)
 	{
 		if (!is_valid_number(values[i]))
 			ft_error(a, b, values, string);
-		if (!check_duplicates(*a, (int)nbr))
-			ft_error(a, b, values, string);
+		// printf("je suis la");
 		nbr = ft_atol(values[i]);
 		if (nbr > INT_MAX || nbr < INT_MIN)
 			ft_error(a, b, values, string);
-		new = ft_lstnew((int)nbr);
+		if (!check_duplicates(*a, (int)nbr))
+			ft_error(a, b, values, string);
+			//printf("je suis la");
+		new = ft_lstnew(nbr);
 		if (!new)
 			ft_error(a, b, values, string);
-		lst_add_back(a, new);
+		ft_lstadd_back(a, new);
 		i++;
 	}
 }
@@ -42,14 +44,13 @@ int	is_valid_number(char *str)
 	int	i;
 	
 	i = 0;
-	
 	if (str[i] == '-' || str[i] == '+')
 		i++;
 	if (!str[i])
 		return (0);
 	while (str[i])
 	{
-		if (!is_digit(str[i]))
+		if (!ft_isdigit(str[i]))
 			return (0);	
 		i++;	
 	}
@@ -65,9 +66,10 @@ int	ft_isdigit(int c)
 
 int	check_duplicates(t_node *stack, int value)
 {
+	printf("je suis la");
 	while(stack)
 	{
-		if (stack->next == value)
+		if (stack->nbr == value)
 			return (0);
 		stack = stack->next;
 	}

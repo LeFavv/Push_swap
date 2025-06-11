@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 16:48:28 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/11 02:38:04 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/11 06:18:41 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void    send_to(t_node **a, t_node **b)
 {
 	int size;
 	
-	size = ft_lstsize(a);
+	size = ft_lstsize(*a);
 	if (size == 2)
 		sort_2(a);
 	if (size == 3)
@@ -32,7 +32,7 @@ void    send_to(t_node **a, t_node **b)
 	if (size == 5)
 		sort_5(a, b);
 	if (size > 5)
-		//??
+		radix_sort(a, b);
 	if (stack_sorted(a))
 		return ;
 }
@@ -40,15 +40,15 @@ void    send_to(t_node **a, t_node **b)
 
 void    sort_2(t_node **a)
 {
-	if (!stack_sorted(*a))
-		sa(*a);
+	if (!stack_sorted(a))
+		sa(a);
 }
 
 void    sort_3(t_node **a)
 {
 	t_node *max_number;
 	
-	max_number = find_max(a);
+	max_number = find_max(*a);
 	if ((*a)->nbr == max_number->nbr)
 		ra(a);
 	else if ((*a)->next->nbr == max_number->nbr)
@@ -61,7 +61,7 @@ void    sort_4(t_node **a, t_node **b)
 {
 	t_node	*min_nbr;
 	
-	min_nbr = find_min(a);
+	min_nbr = find_min(*a);
 	if ((*a)->nbr == min_nbr->nbr)
 		pb(a, b);
 	else if ((*a)->next->nbr == min_nbr->nbr)
@@ -84,7 +84,7 @@ void    sort_5(t_node **a, t_node **b)
 {
 	t_node	*min_nbr;
 
-	min_nbr = find_min(a);
+	min_nbr = find_min(*a);
 	if ((*a)->nbr == min_nbr->nbr)
 		pb(a, b);
 	else if ((*a)->next->nbr == min_nbr->nbr)

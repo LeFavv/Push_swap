@@ -1,24 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_print_chars.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 14:48:55 by vafavard          #+#    #+#             */
-/*   Updated: 2025/04/28 13:46:29 by vafavard         ###   ########.fr       */
+/*   Created: 2025/05/07 19:22:07 by vafavard          #+#    #+#             */
+/*   Updated: 2025/06/11 05:13:34 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+int	print_c(unsigned int args)
 {
-	if (!f)
-		return ;
-	while (lst)
+	int	count;
+
+	count = 1;
+	ft_putchar(args);
+	return (count);
+}
+
+int	print_s(char *args)
+{
+	int	count;
+
+	count = 0;
+	if (!args)
 	{
-		f(lst->content);
-		lst = lst->next;
+		write (1, "(null)", 6);
+		return (6);
 	}
+	while (*args)
+	{
+		ft_putchar(*args);
+		args++;
+		count++;
+	}
+	return (count);
 }

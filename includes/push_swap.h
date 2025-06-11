@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 08:02:23 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/11 04:04:10 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/11 19:27:10 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,20 @@
 # include <stdlib.h>
 # include <math.h>
 # include <limits.h>
+# include "ft_printf.h"
+
+typedef struct s_node
+{
+	int				nbr;
+	int				index;
+	struct s_node	*next;
+}	t_node;
 
 //lst_func
-t_node	*ft_lstnew(void *content);
+t_node	*ft_lstnew(int content);
 void	ft_lstadd_back(t_node **lst, t_node *new);
-void	ft_lstadd_front(t_node **lst, t_node *new);
 t_node	*ft_lstlast(t_node *lst);
+void	ft_lstadd_front(t_node **lst, t_node *new);
 int		ft_lstsize(t_node *lst);
 int		ft_lstsize(t_node *lst);
 
@@ -38,6 +46,12 @@ t_node  *find_max(t_node *stack);
 t_node  *find_min(t_node *stack);
 void    assign_index(t_node **stack);
 
+//utils2
+int		ft_count_word(char const *s, char c);
+char	*ft_malloc(char const *s, int start, int end);
+char	**ft_split(char const *s, char c);
+int		extern_loop(const char *s, int i, char c, int flag);
+
 //stack gest
 void	init_stack_a(t_node **a, t_node **b, char **values, int string);
 
@@ -48,6 +62,9 @@ void    sort_2(t_node **a);
 void    sort_3(t_node **a);
 void    sort_4(t_node **a, t_node **b);
 void    sort_5(t_node **a, t_node **b);
+
+//radix sort
+void    radix_sort(t_node **a, t_node **b);
 
 //error - free
 int		ft_error(t_node **a, t_node **b, char **values, int string);
@@ -78,12 +95,5 @@ void    reverse_rotate(t_node **stack);
 void	rra(t_node **a);
 void	rrb(t_node **b);
 void	rrr(t_node **a, t_node **b);
-
-typedef struct s_node
-{
-	int				nbr;
-	int				index;
-	struct s_node	*next;
-}	t_node;
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 04:05:01 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/11 04:21:10 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/11 06:13:43 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void    radix_sort(t_node **a, t_node **b)
     
     i = 0;
     max_bits = 0;
-    size = ft_lstsize(a);
+    size = ft_lstsize(*a);
     while ((size - 1) >> max_bits)
         max_bits++;
     while (i < max_bits)
