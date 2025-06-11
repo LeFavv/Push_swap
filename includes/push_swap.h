@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 08:02:23 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/11 03:24:25 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/11 04:04:10 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ t_node	*ft_lstnew(void *content);
 void	ft_lstadd_back(t_node **lst, t_node *new);
 void	ft_lstadd_front(t_node **lst, t_node *new);
 t_node	*ft_lstlast(t_node *lst);
-int	ft_lstsize(t_node *lst);
+int		ft_lstsize(t_node *lst);
+int		ft_lstsize(t_node *lst);
 
 //check
 int		check_duplicates(t_node *stack, int value);
@@ -41,7 +42,7 @@ void    assign_index(t_node **stack);
 void	init_stack_a(t_node **a, t_node **b, char **values, int string);
 
 //sort
-int	stack_sorted(t_node **stack);
+int		stack_sorted(t_node **stack);
 void    send_to(t_node **a, t_node **b);
 void    sort_2(t_node **a);
 void    sort_3(t_node **a);

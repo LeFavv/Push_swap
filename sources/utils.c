@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 17:27:56 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/11 03:22:25 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/11 04:02:41 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,3 +104,4 @@ void    assign_index(t_node **stack)
         current = current->next;
     }
 }
+
