@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 17:27:56 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/11 02:39:59 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/11 03:22:25 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,26 @@ long	ft_atol(const char *str)
 		i++;
 	}
 	return (nb * sign);
+}
+
+void    assign_index(t_node **stack)
+{
+    t_node  *compare;
+    t_node  *current;
+    int     index;
+    
+    current = *stack;
+    while (current)
+    {
+        compare = *stack;
+        index = 0;
+        while (compare)
+        {
+            if (compare->nbr < current->nbr)
+                index++;
+            compare = compare->next;
+        }
+        current->index = index;
+        current = current->next;
+    }
 }
