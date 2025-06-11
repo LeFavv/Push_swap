@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 08:02:23 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/09 17:33:02 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/11 02:25:47 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,11 @@ void	init_stack_a(t_node **a, t_node **b, char **values, int string);
 
 //sort
 int	stack_sorted(t_node **stack);
-
+void    send_to(t_node **a, t_node **b);
+void    sort_2(t_node **a);
+void    sort_3(t_node **a);
+void    sort_4(t_node **a, t_node **b);
+void    sort_5(t_node **a, t_node **b);
 
 //error - free
 int		ft_error(t_node **a, t_node **b, char **values, int string);
