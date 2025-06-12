@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 09:01:42 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/12 10:45:16 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/12 10:57:27 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,11 @@ void	init_stack_a(t_node **a, t_node **b, char **values, int string)
 	{
 		if (!is_valid_number(values[i]))
 			ft_error(a, b, values, string);
-		// printf("je suis la");
 		nbr = ft_atol(values[i]);
 		if (nbr > INT_MAX || nbr < INT_MIN)
 			ft_error(a, b, values, string);
 		if (!check_duplicates(*a, (int)nbr))
 			ft_error(a, b, values, string);
-			//printf("je suis la");
 		new = ft_lstnew(nbr);
 		if (!new)
 			ft_error(a, b, values, string);
@@ -66,7 +64,6 @@ int	ft_isdigit(int c)
 
 int	check_duplicates(t_node *stack, int value)
 {
-	printf("je suis la");
 	while(stack)
 	{
 		if (stack->nbr == value)
