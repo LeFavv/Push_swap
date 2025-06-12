@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 08:02:04 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/11 19:32:17 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/12 10:27:14 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int main(int argc, char **argv)
 	else
 		values = &argv[1];
 	init_stack_a(&a, &b, values, string);
+	assign_index(&a);
 	send_to(&a, &b);
 	return (ft_free_all(&a, &b, values, string), 0);
 }

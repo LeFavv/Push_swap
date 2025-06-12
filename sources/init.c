@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 09:01:42 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/11 19:40:29 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/12 10:45:16 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,7 @@ int	stack_sorted(t_node **stack)
 	{
 		if (current->next->next == NULL)
 			return (1);
+		current = current->next;
 	}
 	return (0);
 }

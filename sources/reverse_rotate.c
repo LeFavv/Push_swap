@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 15:15:40 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/09 15:34:35 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/12 10:40:45 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,11 @@ void    reverse_rotate(t_node **stack)
     prev = NULL;
     last = *stack;
     
-    while (last->next)
+    while (last->next != NULL)
     {
         prev = last;
         last = last->next;
     }
-    
     prev->next = NULL;
     last->next = (*stack);
     *stack = last;

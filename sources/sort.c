@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 16:48:28 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/11 06:18:41 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/12 10:32:47 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ void    send_to(t_node **a, t_node **b)
 	if (stack_sorted(a))
 		return ;
 }
-
 
 void    sort_2(t_node **a)
 {
