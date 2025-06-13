@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 17:24:45 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/12 12:05:50 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/13 19:10:50 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_lstadd_back(t_node **lst, t_node *new);
 t_node	*ft_lstnew(int content);
 void	ft_lstadd_front(t_node **lst, t_node *new);
 t_node	*ft_lstlast(t_node *lst);
-int		ft_lstsize(t_node *lst);
 int		ft_lstsize(t_node *lst);
 
 void	ft_lstadd_back(t_node **lst, t_node *new)
@@ -83,4 +82,3 @@ int	ft_lstsize(t_node *lst)
 	}
 	return (result);
 }
-

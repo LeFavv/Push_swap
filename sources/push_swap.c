@@ -6,17 +6,17 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 08:02:04 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/12 11:40:49 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/13 19:11:25 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	t_node	*a;
 	t_node	*b;
-	char 	**values;
+	char	**values;
 	int		string;
 
 	string = 0;

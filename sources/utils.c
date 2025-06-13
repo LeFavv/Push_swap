@@ -6,56 +6,56 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 17:27:56 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/11 04:02:41 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/13 19:23:43 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_node  *find_min(t_node *stack);
-t_node  *find_max(t_node *stack);
+t_node	*find_min(t_node *stack);
+t_node	*find_max(t_node *stack);
 long	ft_atol(const char *str);
 
-t_node  *find_max(t_node *stack)
+t_node	*find_max(t_node *stack)
 {
-    int     max;
-    t_node  *max_nbr;
-    t_node  *current;
+	int		max;
+	t_node	*max_nbr;
+	t_node	*current;
 
-    max = INT_MIN;
-    current = stack;
-    max_nbr = NULL;
-    while (current)
-    {
-        if (current->nbr > max)
-        {
-            max_nbr = current;
-            max = current->nbr;
-        }
-        current = current->next;
-    }
-    return (max_nbr);
+	max = INT_MIN;
+	current = stack;
+	max_nbr = NULL;
+	while (current)
+	{
+		if (current->nbr > max)
+		{
+			max_nbr = current;
+			max = current->nbr;
+		}
+		current = current->next;
+	}
+	return (max_nbr);
 }
-t_node  *find_min(t_node *stack)
+
+t_node	*find_min(t_node *stack)
 {
-    t_node  *current;
-    t_node  *min_nbr;
-    int     min;
-    
-    current = stack;
-    min_nbr = NULL;
-    min = INT_MAX;
-    
-    while (current)
-    {
-        if (current->nbr < min)
-        {
-            min_nbr = current;
-            min = current->nbr;
-        }
-        current = current->next;
-    }
-    return (min_nbr);
+	t_node	*current;
+	t_node	*min_nbr;
+	int		min;
+
+	current = stack;
+	min_nbr = NULL;
+	min = INT_MAX;
+	while (current)
+	{
+		if (current->nbr < min)
+		{
+			min_nbr = current;
+			min = current->nbr;
+		}
+		current = current->next;
+	}
+	return (min_nbr);
 }
 
 long	ft_atol(const char *str)
@@ -83,25 +83,24 @@ long	ft_atol(const char *str)
 	return (nb * sign);
 }
 
-void    assign_index(t_node **stack)
+void	assign_index(t_node **stack)
 {
-    t_node  *compare;
-    t_node  *current;
-    int     index;
-    
-    current = *stack;
-    while (current)
-    {
-        compare = *stack;
-        index = 0;
-        while (compare)
-        {
-            if (compare->nbr < current->nbr)
-                index++;
-            compare = compare->next;
-        }
-        current->index = index;
-        current = current->next;
-    }
-}
+	t_node	*compare;
+	t_node	*current;
+	int		index;
 
+	current = *stack;
+	while (current)
+	{
+		compare = *stack;
+		index = 0;
+		while (compare)
+		{
+			if (compare->nbr < current->nbr)
+				index++;
+			compare = compare->next;
+		}
+		current->index = index;
+		current = current->next;
+	}
+}

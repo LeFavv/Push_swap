@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 15:19:46 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/11 19:44:55 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/13 19:08:31 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int	ft_error(t_node **a, t_node **b, char **values, int string)
 
 void	free_stack(t_node **a)
 {
-	t_node *node;
-	
+	t_node	*node;
+
 	while (*a)
 	{
 		node = (*a)->next;
@@ -34,8 +34,8 @@ void	free_stack(t_node **a)
 
 void	free_split(char **values)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
 	while (values[i])
 	{

@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 08:02:23 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/11 19:27:10 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/13 19:26:09 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ int		ft_isdigit(int c);
 
 //utils
 long	ft_atol(const char *str);
-t_node  *find_max(t_node *stack);
-t_node  *find_min(t_node *stack);
-void    assign_index(t_node **stack);
+t_node	*find_max(t_node *stack);
+t_node	*find_min(t_node *stack);
+void	assign_index(t_node **stack);
 
 //utils2
 int		ft_count_word(char const *s, char c);
@@ -57,14 +57,14 @@ void	init_stack_a(t_node **a, t_node **b, char **values, int string);
 
 //sort
 int		stack_sorted(t_node **stack);
-void    send_to(t_node **a, t_node **b);
-void    sort_2(t_node **a);
-void    sort_3(t_node **a);
-void    sort_4(t_node **a, t_node **b);
-void    sort_5(t_node **a, t_node **b);
+void	send_to(t_node **a, t_node **b);
+void	sort_2(t_node **a);
+void	sort_3(t_node **a);
+void	sort_4(t_node **a, t_node **b);
+void	sort_5(t_node **a, t_node **b);
 
 //radix sort
-void    radix_sort(t_node **a, t_node **b);
+void	radix_sort(t_node **a, t_node **b);
 
 //error - free
 int		ft_error(t_node **a, t_node **b, char **values, int string);
@@ -74,7 +74,7 @@ void	ft_free_all(t_node **a, t_node **b, char **values, int string);
 
 //mouvements
 //swap
-void    swap(t_node **stack);
+void	swap(t_node **stack);
 void	sa(t_node **a);
 void	sb(t_node **b);
 void	ss(t_node **a, t_node **b);
@@ -82,16 +82,16 @@ void	ss(t_node **a, t_node **b);
 //push
 void	pa(t_node **a, t_node **b);
 void	pb(t_node **a, t_node **b);
-void    push(t_node **stack_one, t_node **stack_two);
+void	push(t_node **stack_one, t_node **stack_two);
 
 //rotate
-void    rotate(t_node **stack);
+void	rotate(t_node **stack);
 void	ra(t_node **a);
 void	rb(t_node **b);
 void	rr(t_node **a, t_node **b);
 
 //reverse rotate
-void    reverse_rotate(t_node **stack);
+void	reverse_rotate(t_node **stack);
 void	rra(t_node **a);
 void	rrb(t_node **b);
 void	rrr(t_node **a, t_node **b);

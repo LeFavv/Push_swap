@@ -6,22 +6,22 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 16:48:28 by vafavard          #+#    #+#             */
-/*   Updated: 2025/06/12 12:09:07 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/06/13 19:20:30 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    send_to(t_node **a, t_node **b);
-void    sort_2(t_node **a);
-void    sort_3(t_node **a);
-void    sort_4(t_node **a, t_node **b);
-void    sort_5(t_node **a, t_node **b);
+void	send_to(t_node **a, t_node **b);
+void	sort_2(t_node **a);
+void	sort_3(t_node **a);
+void	sort_4(t_node **a, t_node **b);
+void	sort_5(t_node **a, t_node **b);
 
-void    send_to(t_node **a, t_node **b)
+void	send_to(t_node **a, t_node **b)
 {
-	int size;
-	
+	int	size;
+
 	size = ft_lstsize(*a);
 	if (size == 1)
 		sort_2(a);
@@ -37,15 +37,16 @@ void    send_to(t_node **a, t_node **b)
 		return ;
 }
 
-void    sort_2(t_node **a)
+void	sort_2(t_node **a)
 {
 	if (!stack_sorted(a))
 		sa(a);
 }
 
-void    sort_3(t_node **a)
+void	sort_3(t_node **a)
 {
-	t_node *max_number;
+	t_node	*max_number;
+
 	if (stack_sorted(a))
 		return ;
 	max_number = find_max(*a);
@@ -57,10 +58,10 @@ void    sort_3(t_node **a)
 		sa(a);
 }
 
-void    sort_4(t_node **a, t_node **b)
+void	sort_4(t_node **a, t_node **b)
 {
 	t_node	*min_nbr;
-	
+
 	if (stack_sorted(a))
 		return ;
 	min_nbr = find_min(*a);
@@ -82,7 +83,7 @@ void    sort_4(t_node **a, t_node **b)
 	pa(a, b);
 }
 
-void    sort_5(t_node **a, t_node **b)
+void	sort_5(t_node **a, t_node **b)
 {
 	t_node	*min_nbr;
 
@@ -100,7 +101,7 @@ void    sort_5(t_node **a, t_node **b)
 	{
 		while ((*a)->nbr != min_nbr->nbr)
 			rra(a);
-		pb(a, b);	
+		pb(a, b);
 	}
 	if (!stack_sorted(a))
 		sort_4(a, b);
